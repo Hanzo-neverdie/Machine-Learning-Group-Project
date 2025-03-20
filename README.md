@@ -27,4 +27,5 @@ Prerequisites:
 - python
 - Code Editor
 - Node.js
-Then you can get a quick start with Vue.js official [quick start](https://vuejs.org/guide/quick-start.html). Also you need to install correlating libs, like pytorch, numpy and so on.
+  Then you can get a quick start with Vue.js official [quick start](https://vuejs.org/guide/quick-start.html).
+  Also you need to install correlating libs, like pytorch, numpy and so on.
