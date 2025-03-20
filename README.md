@@ -18,9 +18,6 @@ project-root/
 │   ├── src/
 │   ├── ...
 ├── backend/
-│   ├── CameraDetection/
-│   ├── ImageDetection/
-│   ├── uploads/
 │   ├── app.py
 │   ├── best_pipeline.joblib
 │   └── ML_network.py
