@@ -1,5 +1,10 @@
 # Machine-Learning-Group-Project
 Lingnan University - Machine Learning for Business - Group Project 
+## Overview
+This project aims to develop a diabetes detection system, contains two parts: front-end and back-end
+- Front-end: use Vue Structure, responsible for user interface display and interaction.
+- Back-end: use Python which contains a machine learning model to make prediction.
+
 
 ## Installation
 1. Clone the repository:
