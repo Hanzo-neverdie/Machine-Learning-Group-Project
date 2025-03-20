@@ -7,3 +7,25 @@ Lingnan University - Machine Learning for Business - Group Project
 git clone https://github.com/Hanzo-neverdie/Machine-Learning-Group-Project.git
 cd Machine-Learning-Group-Project
 ```
+
+Let me introduce the files:
+```text
+project-root/
+├── diabetes_detection/
+│   ├── .vscode/
+│   ├── node_modules/
+│   ├── public/
+│   ├── src/
+│   ├── ...
+├── backend/
+│   ├── CameraDetection/
+│   ├── ImageDetection/
+│   ├── uploads/
+│   ├── app.py
+│   ├── best_pipeline.joblib
+│   └── ML_network.py
+├── uploads/
+├── README.md
+├── README_ch.md
+└── yolov8n.pt
+```
