@@ -38,16 +38,17 @@ Steps:
 
 
 ## Deployment
-To start front-end code
+### To start front-end code
 ```bash
 cd diabetes_detection
 npm run dev
 ```
-To start back-end code
+### To start back-end code
 ```bash
 cd ..
 cd backend
 python app.py
 ```
-Then you can view the website on http://localhost:5173/
+### Access the Website
+Open your browser and navigate to http://localhost:5173/.
 
