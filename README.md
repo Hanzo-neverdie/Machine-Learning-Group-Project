@@ -29,3 +29,18 @@ Prerequisites:
 - Node.js  
 Then you can get a quick start with Vue.js official [quick start](https://vuejs.org/guide/quick-start.html).  
 Also you need to install correlating libs, like pytorch, numpy and so on.
+
+## Deployment
+To start front-end code
+```bash
+cd diabetes_detection
+npm run dev
+```
+To start back-end code
+```bash
+cd ..
+cd backend
+python app.py
+```
+Then you can view the website on http://localhost:5173/
+
