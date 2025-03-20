@@ -31,9 +31,11 @@ project-root/
 Prerequisites:
 - python
 - Code Editor(Recommended: Visual Studio Code)
-- Node.js(Version 18.3 or higher)  
-Then you can get a quick start with Vue.js official [quick start](https://vuejs.org/guide/quick-start.html).  
-Also you need to install correlating libs, like pytorch, numpy and so on.
+- Node.js(Version 18.3 or higher)
+Steps:
+- Follow the Vue.js official [quick start](https://vuejs.org/guide/quick-start.html) to set up the front-end environment.
+- Install additional libraries such as PyTorch, NumPy, etc.
+
 
 ## Deployment
 To start front-end code
