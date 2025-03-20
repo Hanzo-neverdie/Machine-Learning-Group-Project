@@ -30,8 +30,8 @@ project-root/
 ### Environment Setup
 Prerequisites:
 - python
-- Code Editor
-- Node.js  
+- Code Editor(Recommended: Visual Studio Code)
+- Node.js(Version 18.3 or higher)  
 Then you can get a quick start with Vue.js official [quick start](https://vuejs.org/guide/quick-start.html).  
 Also you need to install correlating libs, like pytorch, numpy and so on.
 
