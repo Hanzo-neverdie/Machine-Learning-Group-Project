@@ -11,18 +11,14 @@ cd Machine-Learning-Group-Project
 Let me introduce the files:
 ```text
 project-root/
-├── diabetes_detection/
+├── diabetes_detection/(VUE structrue)
 │   ├── .vscode/
 │   ├── node_modules/
 │   ├── public/
 │   ├── src/
 │   ├── ...
 ├── backend/
-│   ├── app.py
-│   ├── best_pipeline.joblib
+│   ├── app.py(used to make predictation)
+│   ├── best_pipeline.joblib(saved model by running ML_network.py)
 │   └── ML_network.py
-├── uploads/
-├── README.md
-├── README_ch.md
-└── yolov8n.pt
 ```
