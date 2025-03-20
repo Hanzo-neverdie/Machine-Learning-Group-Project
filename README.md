@@ -24,3 +24,7 @@ project-root/
 ```
 ### Environment Setup
 Prerequisites:
+- python
+- Code Editor
+- Node.js
+Then you can get a quick start with Vue.js official [quick start]([https://nodejs.org/](https://vuejs.org/guide/quick-start.html))
