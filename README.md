@@ -7,13 +7,13 @@ This project aims to develop a diabetes detection system, contains two parts: fr
 
 
 ## Installation
-1. Clone the repository:
+### Clone the repository:
 ```bash
 git clone https://github.com/Hanzo-neverdie/Machine-Learning-Group-Project.git
 cd Machine-Learning-Group-Project
 ```
 
-Let me introduce the files:
+### Let me introduce the files:
 ```text
 project-root/
 ├── diabetes_detection/(VUE structrue)
@@ -28,11 +28,11 @@ project-root/
 │   └── ML_network.py
 ```
 ### Environment Setup
-Prerequisites:
+#### Prerequisites:
 - python
 - Code Editor(Recommended: Visual Studio Code)
 - Node.js(Version 18.3 or higher)
-Steps:
+#### Steps:
 - Follow the Vue.js official [quick start](https://vuejs.org/guide/quick-start.html) to set up the front-end environment.
 - Install additional libraries such as PyTorch, NumPy, etc.
 
