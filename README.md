@@ -22,3 +22,5 @@ project-root/
 │   ├── best_pipeline.joblib(saved model by running ML_network.py)
 │   └── ML_network.py
 ```
+### Environment Setup
+Prerequisites:
