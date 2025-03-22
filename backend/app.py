@@ -5,31 +5,31 @@ import torch
 import torch.nn as nn
 from sklearn.preprocessing import StandardScaler
 from sklearn.base import BaseEstimator, TransformerMixin
-from flask_cors import CORS  # 导入 CORS
-# 设备配置
+from flask_cors import CORS  # import CORS
+# device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-# 自定义预处理组件
+# define custom preprocessor
 class TorchPreprocessor(TransformerMixin, BaseEstimator):
-    """自定义预处理组件"""
+    """Custom preprocessor component"""
     def __init__(self):
         self.scaler = StandardScaler()
         
     def fit(self, X, y=None):
-        # 确保输入是NumPy数组
+        # Ensure input is a NumPy array
         if isinstance(X, torch.Tensor):
             X = X.numpy()
         self.scaler.fit(X)
         return self
     
     def transform(self, X):
-        # 确保输入是NumPy数组
+        # Ensure input is a NumPy array
         if isinstance(X, torch.Tensor):
             X = X.numpy()
         X_scaled = self.scaler.transform(X)
         return torch.FloatTensor(X_scaled)
 
-# 自定义 PyTorch 模型封装器
+# define custom PyTorch estimator
 class TorchEstimator(BaseEstimator):
     """PyTorch模型封装器"""
     def __init__(self, hidden_layers=[64,32], dropout=0.5, lr=0.001, epochs=100):
@@ -39,28 +39,28 @@ class TorchEstimator(BaseEstimator):
         self.epochs = epochs
         
     def fit(self, X, y):
-        # 确保输入是Tensor
+        # Ensure input is Tensor
         if isinstance(X, np.ndarray):
             X = torch.FloatTensor(X)
         if isinstance(y, np.ndarray):
             y = torch.FloatTensor(y).reshape(-1, 1)
         
-        # 初始化模型
+        # initialize model
         self.model = DiabetesMLP(
             input_size=X.shape[1],
             hidden_layers=self.hidden_layers,
             dropout=self.dropout
         ).to(device)
         
-        # 优化器
+        # optimizer and loss function
         optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
         criterion = nn.BCELoss()
         
-        # 转换为DataLoader
+        # transform to DataLoader
         dataset = torch.utils.data.TensorDataset(X, y)
         loader = torch.utils.data.DataLoader(dataset, batch_size=32, shuffle=True)
         
-        # 训练循环
+        # train loop
         for _ in range(self.epochs):
             self.model.train()
             for inputs, labels in loader:
@@ -73,7 +73,7 @@ class TorchEstimator(BaseEstimator):
         return self
     
     def predict_proba(self, X):
-        # 确保输入是Tensor
+        # Ensure input is Tensor
         if isinstance(X, np.ndarray):
             X = torch.FloatTensor(X)
         self.model.eval()
@@ -81,7 +81,7 @@ class TorchEstimator(BaseEstimator):
             preds = self.model(X.to(device)).cpu().numpy()
         return np.concatenate([1-preds, preds], axis=1)
 
-# 定义 MLP 模型
+# define MLP model
 class DiabetesMLP(nn.Module):
     def __init__(self, input_size=8, hidden_layers=[64, 32], dropout=0.5):
         super(DiabetesMLP, self).__init__()
@@ -99,16 +99,16 @@ class DiabetesMLP(nn.Module):
     def forward(self, x):
         return torch.sigmoid(self.net(x))
 
-# 加载模型
+# load model
 model_path = '.\\best_pipeline.joblib'
 model = joblib.load(model_path)
 
 app = Flask(__name__)
-CORS(app)  # 启用 CORS
+CORS(app)  # turn on CORS
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
-        # 获取 JSON 数据
+        # get JSON data
         data = request.json
         input_array = np.array([
             data['Pregnancies'],
@@ -121,7 +121,7 @@ def predict():
             data['Age']
         ]).reshape(1, -1)
         
-        # 进行预测
+        # make prediction
         prediction = model.predict_proba(input_array)
         result = 'Diabetic' if prediction[0][1] >= 0.5 else 'Non-Diabetic'
         probability = prediction[0][1]
