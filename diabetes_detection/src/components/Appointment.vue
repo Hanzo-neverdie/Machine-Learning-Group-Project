@@ -99,9 +99,9 @@
       <button type="submit">Submit</button>
     </form>
     <div v-if="predictionResult">
-      <h3>Prediction Result:</h3>
-      <p>{{ predictionResult }}</p>
-      <p>Probability: {{ predictionProbability.toFixed(3) }}</p>
+      <h3 style="color: #007bff; text-align: center; margin-top: 20px;">Prediction Result:</h3>
+      <p style="text-align: center; font-size: larger;" :style="predictionColor">{{ predictionResult }}</p>
+      <p style="text-align: center;">Probability: {{ predictionProbability.toFixed(3) }}</p>
     </div>
   </div>
 </template>
@@ -125,6 +125,18 @@ export default {
       predictionResult: null,
       predictionProbability: null
     };
+  },
+  computed: {
+    predictionColor() {
+      
+      if (this.predictionResult === 'Diabetic') {
+        return { color: 'red' };
+      } else if (this.predictionResult === 'Non-Diabetic') {
+        return { color: 'green' };
+      } else {
+        return { color: 'black' }; // 默认颜色
+      }
+    }
   },
   methods: {
     async submitForm() {

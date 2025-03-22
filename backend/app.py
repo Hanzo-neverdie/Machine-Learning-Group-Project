@@ -100,7 +100,7 @@ class DiabetesMLP(nn.Module):
         return torch.sigmoid(self.net(x))
 
 # 加载模型
-model_path = 'C:\\Users\\99569\\Desktop\\ML-group\\backend\\best_pipeline.joblib'
+model_path = '.\\best_pipeline.joblib'
 model = joblib.load(model_path)
 
 app = Flask(__name__)

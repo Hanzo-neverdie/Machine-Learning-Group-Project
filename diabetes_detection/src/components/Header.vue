@@ -1,7 +1,7 @@
 <template>
 <div class="header w">
     <!-- logo模块 -->
-    <div class="logo"><a href="#">Healthy Clinic<img src="../assets/logo.svg" alt=""></a></div>
+    <div class="logo"><a href="#">Healthy Clinic<img src="../assets/clinic.svg" alt=""></a></div>
     <!-- 用户模块 -->
     <div class="user">
         <a href="#"><img src="../assets/user.svg" alt="">
@@ -31,6 +31,11 @@
     width: 40px;
     font-weight: bold;
     font-size: 14px;
+}
+.logo img {
+    width: 40px;
+    height: 40px;
+    
 }
 .logo a {
     display: block;
