@@ -35,8 +35,8 @@ It shows a complete process of machine learning with MLP model.
 - Recall: 0.5926
 - Specificity: 0.8300
 - F1 Score: 0.6214
-- AUC: 0.8131
-- ![示例图片](ROC_Curve.png)
+- AUC: 0.8131  
+![示例图片](ROC_Curve.png)
 ### Environment Setup
 #### Prerequisites:
 - python
