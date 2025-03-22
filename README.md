@@ -28,6 +28,15 @@ project-root/
 │   └── ML_network.py
 ├── diabetes.csv(Pima Indians Diabetes from kaggle(https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database?resource=download))
 ```
+#### ML_network.py 
+It shows a complete process of machine learning with MLP model.
+- Accuracy: 0.7468
+- Precision: 0.6531
+- Recall: 0.5926
+- Specificity: 0.8300
+- F1 Score: 0.6214
+- AUC: 0.8131
+![示例图片](example.jpg)
 ### Environment Setup
 #### Prerequisites:
 - python
