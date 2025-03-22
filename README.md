@@ -26,6 +26,7 @@ project-root/
 │   ├── app.py(used to make predictation)
 │   ├── best_pipeline.joblib(saved model by running ML_network.py)
 │   └── ML_network.py
+├── diabetes.csv(diabetes data from [kaggle](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database?resource=download))
 ```
 ### Environment Setup
 #### Prerequisites:
